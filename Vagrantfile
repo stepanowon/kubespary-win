@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "gutehall/ubuntu24-04"
+  config.vm.box = "bento/ubuntu-24.04"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 4096
@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     node.vm.hostname = "vm1"
     node.vm.network "private_network", ip: "192.168.56.201"
     node.vm.provider "virtualbox" do |vb|
-      vb.name = "master"
+      vb.name = "vm1"
     end
   end
 
@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     hostname = "vm#{'%01d' % i}"
     config.vm.define "#{hostname}" do |node|
       node.vm.hostname = "#{hostname}"
-      node.vm.network "private_network", ip: "192.168.56.#{201 + i}"
+      node.vm.network "private_network", ip: "192.168.56.#{200 + i}"
       node.vm.provider "virtualbox" do |vb|
         vb.name = "vm#{'%01d' % i}"
         vb.cpus = 2
