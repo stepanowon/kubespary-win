@@ -14,8 +14,4 @@ apt install -y git
 
 ufw disable
 
-apt update
 apt install virtualbox-guest-additions-iso -y
-
-echo virtualbox-ext-pack virtualbox-ext-pack/license select true | bconf-set-selections
-DEBIAN_FRONTEND=noninteractive apt-get install -y virtualbox-ext-pack
