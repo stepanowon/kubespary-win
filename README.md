@@ -47,7 +47,7 @@ ssh-copy-id vagrant@192.168.56.202
 ssh-copy-id vagrant@192.168.56.203
 ```
 
-### python 가상환경 생성 
+### python 가상환경 생성(k8s-master에서)
 ```sh
 sudo apt install -y python3.12-venv
 
