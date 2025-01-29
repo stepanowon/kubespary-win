@@ -15,3 +15,6 @@ apt install -y git
 ufw disable
 
 apt install virtualbox-guest-additions-iso -y
+
+timedatectl set-timezone 'Asia/Seoul'
+timedatectl set-ntp true
