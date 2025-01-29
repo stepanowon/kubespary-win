@@ -2,6 +2,6 @@
 
 set -euo pipefail
 
-cp -r /vagrant /home/user1/
-chown -R user1:user1 /home/user1/vagrant
+cp -r /vagrant /home/vagrant/
+chown -R vagrant:vagrant /home/vagrant/vagrant
 echo "### 샘플 예제 복사"
